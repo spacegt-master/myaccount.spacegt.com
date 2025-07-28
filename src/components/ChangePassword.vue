@@ -45,7 +45,7 @@ const rules = [(value: string) => {
 
     return '密码不能为空！'
 },
-v => (v && v.length >= 8 && v.length <= 20) || '密码长度应在 8 到 20 个字符之间',
+(v: string) => (v && v.length >= 8 && v.length <= 20) || '密码长度应在 8 到 20 个字符之间',
 ]
 
 
