@@ -34,7 +34,7 @@
                     <v-divider></v-divider>
 
                     <v-card-actions class="pa-3">
-                        <v-btn color="info" text="管理您的数据和隐私设置" to="/data-and-privacy"></v-btn>
+                        <v-btn color="info" text="管理您的数据和隐私设置" to="/personal-info"></v-btn>
                     </v-card-actions>
                 </v-card>
             </v-col>
@@ -57,7 +57,7 @@
                     <v-divider></v-divider>
 
                     <v-card-actions class="pa-3">
-                        <v-btn color="info" text="查看详情" to="/security"></v-btn>
+                        <v-btn color="info" text="查看详情" to="/personal-info"></v-btn>
                     </v-card-actions>
                 </v-card>
             </v-col>
@@ -81,7 +81,7 @@
                     <v-divider></v-divider>
 
                     <v-card-actions class="pa-3">
-                        <v-btn color="info" text="进行隐私设置检查" to="/data-and-privacy"></v-btn>
+                        <v-btn color="info" text="进行隐私设置检查" to="/personal-info"></v-btn>
                     </v-card-actions>
                 </v-card>
             </v-col>
@@ -144,10 +144,10 @@
 </template>
 
 <script setup>
-import spacegt from 'spacegt'
+import { useAccountsStore } from 'spacegt'
 import { ref } from 'vue'
 
-const accountsStore = spacegt.stores.useAccountsStore()
+const accountsStore = useAccountsStore()
 
 const labels = { 0: 'SU', 1: 'MO', 2: 'TU', 3: 'WED', 4: 'TH', 5: 'FR', 6: 'SA' }
 const forecast = [

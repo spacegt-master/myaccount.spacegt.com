@@ -8,8 +8,15 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ChangeAvatar: typeof import('./components/ChangeAvatar.vue')['default']
+    ChangeEmail: typeof import('./components/ChangeEmail.vue')['default']
+    ChangeName: typeof import('./components/ChangeName.vue')['default']
+    ChangePassword: typeof import('./components/ChangePassword.vue')['default']
+    ChangePhone: typeof import('./components/ChangePhone.vue')['default']
+    copy: typeof import('./components/ChangeEmail copy.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UpdateAvatar: typeof import('./components/UpdateAvatar.vue')['default']
   }
 }

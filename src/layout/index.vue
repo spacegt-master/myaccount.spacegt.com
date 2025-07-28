@@ -19,7 +19,7 @@
         </v-app-bar>
 
         <v-navigation-drawer v-model="drawer" class="border-0">
-            <v-list class="mt-4">
+            <v-list v-model:selected="selected" class="mt-4">
                 <v-list-item class="text-subtitle-2 pl-6 " v-for="(item, i) in items" :key="i" :value="item.to"
                     :to="item.to" color="primary" rounded="e-xl" link>
                     <template v-slot:prepend>
@@ -54,15 +54,19 @@
 </template>
 
 <script setup>
-import spacegt from 'spacegt'
-import { ref } from 'vue'
+import { useAccountsStore, useAuthorizationStore } from 'spacegt'
+import { ref, watch } from 'vue'
 
-const accountsStore = spacegt.stores.useAccountsStore()
-const authorizationStore = spacegt.stores.useAuthorizationStore()
+const accountsStore = useAccountsStore()
+const authorizationStore = useAuthorizationStore()
 
 const drawer = ref(true)
 
 const cahars = import.meta.env.VITE_APP_TITLE
+
+const selected = ref()
+
+watch(selected, () => selected.value = undefined)
 
 const items = ref([
     {
