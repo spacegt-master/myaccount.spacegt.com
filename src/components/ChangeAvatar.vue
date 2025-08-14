@@ -9,7 +9,7 @@
                     {{ $vuetify.defaults?.title }} 账号
                 </v-card-title>
                 <template #append>
-                    <v-btn icon="$close" size="small" variant="plain" />
+                    <v-btn icon="$close" size="small" variant="plain" @click="drawer = false" />
                 </template>
             </v-card-item>
             <v-card-text class="px-6 pt-6 text-body-2">
@@ -38,7 +38,7 @@
 
             </v-card-text>
             <v-card-actions class="justify-center ga-3 px-6 pt-0 pb-6">
-                <v-btn class="text-none text-body-2 px-3" color="surface-variant" rounded="pill" text="更改"
+                <v-btn class="text-none text-body-2 px-3" color="surface-variant" rounded="pill" text="保存"
                     prepend-icon="mdi-rename" variant="flat" :disabled="file == null" @click="changeAvatar" />
                 <v-btn border="md" class="text-none text-body-2 px-3" rounded="pill" text="移除" prepend-icon="mdi-delete"
                     variant="flat" @click="removeAvatar" />

@@ -10,7 +10,7 @@
                         {{ $vuetify.defaults?.title }} 账号
                     </v-card-title>
                     <template #append>
-                        <v-btn icon="$close" size="small" variant="plain" />
+                        <v-btn icon="$close" size="small" variant="plain" @click="drawer = false" />
                     </template>
                 </v-card-item>
                 <v-card-text class="px-6 pt-6 text-body-2">

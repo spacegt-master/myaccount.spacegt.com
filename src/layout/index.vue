@@ -69,11 +69,11 @@ const selected = ref()
 watch(selected, () => selected.value = undefined)
 
 const items = ref([
-    {
-        title: '首页',
-        prependIcon: 'mdi-account-circle-outline',
-        to: '/home'
-    },
+    // {
+    //     title: '首页',
+    //     prependIcon: 'mdi-account-circle-outline',
+    //     to: '/home'
+    // },
     {
         title: '个人信息',
         prependIcon: 'mdi-badge-account-horizontal-outline',
